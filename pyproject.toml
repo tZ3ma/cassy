@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "hpmpy-project"
+name = "fogd-db"
 version = "0.0.8"
 description = "Tweaked Hypermodern Python Project Template w/o Typing"
 authors = ["Mathias Ammon <mathias.ammon@tuhh.de>"]
 license = "MIT"
 readme = "README.rst"
-repository = "https://github.com/tZ3ma/hpmpy_project"
-homepage = "https://github.com/tZ3ma/hpmpy_project"
+repository = "https://github.com/tZ3ma/fogd_db"
+homepage = "https://github.com/tZ3ma/fogd_db"
 keywords = ["hypermodern", "template"]
 
 [tool.poetry.dependencies]
@@ -38,7 +38,7 @@ source = ["src", "*/site-packages"]
 
 [tool.coverage.run]
 branch = true
-source = ["hpmpy_project"]
+source = ["fogd_db"]
 
 [tool.coverage.report]
 show_missing = true
