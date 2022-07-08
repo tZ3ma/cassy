@@ -33,7 +33,7 @@ print(sys.path)
 
 # -- Project information -----------------------------------------------------
 
-project = "fogd_db - Hypermodern Python Project Template"
+project = "cassy - Python Cassandra Database API"
 author = "Mathias Ammon"
 copyright = f"2022, {author}"  # pylint: disable=redefined-builtin
 
@@ -44,15 +44,12 @@ extensions = [
     "sphinx.ext.napoleon",  # enable numpy style docstring syntax
     "sphinx.ext.viewcode",  # enable source links
     # 3rd party extensions
-    # 'sphinx_execute_code',  # execute code
     "sphinx_paramlinks",  # enable :param: cross referencing
-    # 'sphinxcontrib.excel_table',  # show xlsx exceltables
-    # 'sphinxcontrib.exceltable',  # show xls exceltables
 ]
 
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
-    "canonical_url": "https://github.com/tZ3ma/fogd_db/",
+    "canonical_url": "https://github.com/tZ3ma/cassy/",
     "display_version": True,
     "sticky_navigation": True,
     # 'style_nav_header_background': '#009682',
@@ -61,11 +58,6 @@ html_theme_options = {
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
-    "networkx": ("https://networkx.org/documentation/stable/", None),
-    "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-    "scipy": ("https://docs.scipy.org/doc/scipy/reference", None),
-    "matplotlib": ("https://matplotlib.org", None),
 }
 
 # Sort the documentation

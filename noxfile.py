@@ -38,7 +38,7 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def tests(session):
     """Run test suite."""
     args = session.posargs or [
@@ -54,15 +54,17 @@ def tests(session):
         "pytest",
         "pytest-cov",
         "pytest-mock",
+        "pytest_dependency",
+        "ccm",
     )
     session.run("pytest", *args)
 
 
 # locations to run linting and formatting on:
-locations = "src", "tests", "noxfile.py", "docs/conf.py"
+locations = "src", "tests", "noxfile.py", "docs/conf.py", "tests/db_api"
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def lint(session):
     """Lint using flake8."""
     args = session.posargs or locations
@@ -84,7 +86,7 @@ def lint(session):
     session.run("flake8", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def pylint(session):
     """Lint using pylint."""
     args = session.posargs or locations
@@ -95,11 +97,12 @@ def pylint(session):
         "requests",
         "nox",
         "pylint",
+        "cqlsh",
     )
     session.run("pylint", "--output-format=colorized", "--recursive=y", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def black(session):
     """Reformat code using black."""
     args = session.posargs or locations
@@ -107,16 +110,16 @@ def black(session):
     session.run("black", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def xdoctest(session):
     """Run examples with xdoctest."""
     args = session.posargs or ["all"]
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "xdoctest", "pygments")
-    session.run("python", "-m", "xdoctest", "fogd_db", *args)
+    session.run("python", "-m", "xdoctest", "cassy", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def docs(session):
     """Build the documentation."""
     session.run("poetry", "install", "--no-dev", external=True)
@@ -132,7 +135,7 @@ def docs(session):
     session.run("sphinx-build", "docs", "docs/_build")
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def docs_live(session):
     """Build and serve the documentation with live reloading on changes."""
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]
@@ -155,7 +158,7 @@ def docs_live(session):
     session.run("sphinx-autobuild", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def docs_rebuild(session):
     """Rebuild the entire sphinx documentation."""
     session.run("poetry", "install", "--no-dev", external=True)
@@ -175,14 +178,14 @@ def docs_rebuild(session):
     session.run("sphinx-build", "docs", "docs/_build")
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def coverage(session):
     """Produce coverage report."""
     install_with_constraints(session, "coverage[toml]", "codecov")
     session.run("coverage", "xml", "--fail-under=0")
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def codecov(session):
     """Produce coverage report and try uploading to codecov."""
     install_with_constraints(session, "coverage[toml]", "codecov")
@@ -218,7 +221,7 @@ def precommit(session):
     session.run("pre-commit", *args)
 
 
-@nox.session(python="3.10")
+@nox.session(python="3.8")
 def safety(session):
     """Scan dependencies for insecure packages using safety."""
     with tempfile.NamedTemporaryFile() as requirements:

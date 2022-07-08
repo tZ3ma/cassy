@@ -247,9 +247,9 @@ commands:
 
    poetry add package^1.0
    poetry add "package>=1.0"
-   poetry add fogd_db@latest
-   poetry add git+https://github.com/tZ3ma/fogd_db.git
-   poetry add git+https://github.com/tZ3ma/fogd_db.git#develop
+   poetry add cassy@latest
+   poetry add git+https://github.com/tZ3ma/cassy.git
+   poetry add git+https://github.com/tZ3ma/cassy.git#develop
    poetry add ./my-package/
 
 Adding local dependencies in editable mode

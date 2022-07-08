@@ -1,5 +1,5 @@
-fogd-db
-====================================================================================================
+cassy
+=======
 
 |PyPI| |Python Version| |License| |Status|
 
@@ -11,68 +11,68 @@ fogd-db
 
 |pre-commit| |Black| |Pylint| |Flake8|
 
-.. |PyPI| image:: https://img.shields.io/pypi/v/fogd-db.svg
-   :target: https://pypi.org/project/fogd-db/
+.. |PyPI| image:: https://img.shields.io/pypi/v/cassy.svg
+   :target: https://pypi.org/project/cassy/
    :alt: PyPI
 
-.. |Python Version| image:: https://img.shields.io/pypi/pyversions/fogd-db
-   :target: https://pypi.org/project/fogd-db
+.. |Python Version| image:: https://img.shields.io/pypi/pyversions/cassy
+   :target: https://pypi.org/project/cassy
    :alt: Python Version
 
-.. |License| image:: https://img.shields.io/pypi/l/fogd-db
+.. |License| image:: https://img.shields.io/pypi/l/cassy
    :target: https://opensource.org/licenses/MIT
    :alt: License
 
-.. |Status| image:: https://img.shields.io/pypi/status/fogd-db.svg
-   :target: https://pypi.org/project/fogd-db/
+.. |Status| image:: https://img.shields.io/pypi/status/cassy.svg
+   :target: https://pypi.org/project/cassy/
    :alt: Status
 
-.. |Stable Release| image:: https://github.com/tZ3ma/fogd-db/workflows/Stable-PyPI-Release/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Stable-PyPI-Release
+.. |Stable Release| image:: https://github.com/tZ3ma/cassy/workflows/Stable-PyPI-Release/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Stable-PyPI-Release
    :alt: Stable PyPI Release Workflow Status
 
-.. |Develop Release| image:: https://github.com/tZ3ma/fogd-db/workflows/Develop-TestPyPI-Release/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Develop-TestPyPI-Release
+.. |Develop Release| image:: https://github.com/tZ3ma/cassy/workflows/Develop-TestPyPI-Release/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Develop-TestPyPI-Release
    :alt: Develop TestPyPI Release Workflow Status
 
-.. |Read the Docs| image:: https://img.shields.io/readthedocs/fogd-db/latest.svg?label=Read%20the%20Docs
-   :target: https://fogd-db.readthedocs.io/
-   :alt: Read the documentation at https://fogd-db.readthedocs.io/
+.. |Read the Docs| image:: https://img.shields.io/readthedocs/cassy/latest.svg?label=Read%20the%20Docs
+   :target: https://cassy.readthedocs.io/
+   :alt: Read the documentation at https://cassy.readthedocs.io/
 
-.. |Tests| image:: https://github.com/tZ3ma/fogd-db/workflows/Tests-and-Coverage/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Tests-and-Coverage
+.. |Tests| image:: https://github.com/tZ3ma/cassy/workflows/Tests-and-Coverage/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Tests-and-Coverage
    :alt: Tests Workflow Status
 
-.. |Safety| image:: https://github.com/tZ3ma/fogd-db/workflows/Safety/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Safety
+.. |Safety| image:: https://github.com/tZ3ma/cassy/workflows/Safety/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Safety
    :alt: Safety Workflow Status
 
-.. |Pylinting| image:: https://github.com/tZ3ma/fogd-db/workflows/Pylinting/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Pylinting
+.. |Pylinting| image:: https://github.com/tZ3ma/cassy/workflows/Pylinting/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Pylinting
    :alt: Pylint Workflow Status
 
-.. |Flake8 Linting| image:: https://github.com/tZ3ma/fogd-db/workflows/Flake8-Linting/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Flake8-Linting
+.. |Flake8 Linting| image:: https://github.com/tZ3ma/cassy/workflows/Flake8-Linting/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Flake8-Linting
    :alt: Flake8-Linting Workflow Status
 
-.. |Pre-Commit| image:: https://github.com/tZ3ma/fogd-db/workflows/Pre-Commit/badge.svg
-   :target: https://github.com/tZ3ma/fogd-db/actions?workflow=Pre-Commit
+.. |Pre-Commit| image:: https://github.com/tZ3ma/cassy/workflows/Pre-Commit/badge.svg
+   :target: https://github.com/tZ3ma/cassy/actions?workflow=Pre-Commit
    :alt: Pre-Commit Workflow Status
 
-.. |Codecov| image:: https://codecov.io/gh/tZ3ma/fogd-db/branch/main/graph/badge.svg
-   :target: https://codecov.io/gh/tZ3ma/fogd-db
+.. |Codecov| image:: https://codecov.io/gh/tZ3ma/cassy/branch/main/graph/badge.svg
+   :target: https://codecov.io/gh/tZ3ma/cassy
    :alt: Codecov
 
 .. |Codacy| image:: https://app.codacy.com/project/badge/Grade/b278433bb9224147a2e6231d783b62e4
-   :target: https://app.codacy.com/gh/tZ3ma/fogd-db/dashboard
+   :target: https://app.codacy.com/gh/tZ3ma/cassy/dashboard
    :alt: Codacy Code Quality Status
 
 .. |Codeclimate| image:: https://api.codeclimate.com/v1/badges/ff119252f0bb7f40aecb/maintainability
-   :target: https://codeclimate.com/github/tZ3ma/fogd-db/maintainability
+   :target: https://codeclimate.com/github/tZ3ma/cassy/maintainability
    :alt: Maintainability
 
-.. |Scrutinizer| image:: https://scrutinizer-ci.com/g/tZ3ma/fogd-db/badges/quality-score.png?b=main
-   :target: https://scrutinizer-ci.com/g/tZ3ma/fogd-db/
+.. |Scrutinizer| image:: https://scrutinizer-ci.com/g/tZ3ma/cassy/badges/quality-score.png?b=main
+   :target: https://scrutinizer-ci.com/g/tZ3ma/cassy/
    :alt: Scrutinizer Code Quality
 
 .. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
@@ -92,8 +92,7 @@ fogd-db
    :alt: Package uses flake8
 
 
-Newb tweaked non-typing version of the excellent Hypermodern-Python_ project
-foundation proposed by `Claudio Jolowicz <cj>`_
+Manage a **FO**\ rest **G**\ arden cassandra **D**\ ata\ **B**\ ase.
 
 Installation
 ------------
@@ -118,7 +117,7 @@ License
 -------
 
 Distributed under the terms of the `MIT license`_ (`Github Repo Link`_),
-*fogd-db* is free and open source software.
+*cassy* is free and open source software.
 
 
 Issues
@@ -140,7 +139,7 @@ Hypermodern-Python_ project foundation proposed by `Claudio Jolowicz <cj>`_.
 .. _MIT license: https://opensource.org/licenses/MIT
 .. _PyPI: https://pypi.org/
 
-.. _file an issue: https://github.com/tZ3ma/fogd-db/issues
+.. _file an issue: https://github.com/tZ3ma/cassy/issues
 .. _pip: https://pip.pypa.io/
 
 .. _tZ3ma: https://github.com/tZ3ma
@@ -149,4 +148,4 @@ Hypermodern-Python_ project foundation proposed by `Claudio Jolowicz <cj>`_.
 .. _Installation Guide: docs/source/getting_started/installation.rst
 .. _Workflow-Guide: docs/source/developer_guide/workflows.rst
 
-.. _Github Repo Link: https://github.com/tZ3ma/fogd-db
+.. _Github Repo Link: https://github.com/tZ3ma/cassy

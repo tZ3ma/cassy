@@ -7,6 +7,15 @@ Unittests
    :members:
    :show-inheritance:
 
+
+.. rubric:: Cassy API Tests
+.. toctree::
+   :maxdepth: 4
+
+   unittests/test_casdriv
+   unittests/test_cql
+
+.. rubric:: Default Template Tests
 .. toctree::
    :maxdepth: 4
 

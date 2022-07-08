@@ -1,2 +1,2 @@
-# fogd_db/tests/__init__.py
-"""fogd-db's (pytest) package."""
+# cassy/tests/__init__.py
+"""cassy's (pytest) package."""

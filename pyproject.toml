@@ -1,17 +1,18 @@
 [tool.poetry]
-name = "fogd-db"
+name = "cassy"
 version = "0.0.8"
 description = "Tweaked Hypermodern Python Project Template w/o Typing"
 authors = ["Mathias Ammon <mathias.ammon@tuhh.de>"]
 license = "MIT"
 readme = "README.rst"
-repository = "https://github.com/tZ3ma/fogd_db"
-homepage = "https://github.com/tZ3ma/fogd_db"
-keywords = ["hypermodern", "template"]
+repository = "https://github.com/tZ3ma/cassy"
+homepage = "https://github.com/tZ3ma/cassy"
+keywords = ["cassandra", "database", "api"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.27.1"
+cqlsh = "^6.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
@@ -32,13 +33,15 @@ pyupgrade = "^2.32.1"
 sphinx-paramlinks = "^0.5.2"
 pylint = "^2.14.0"
 nox = "^2022.1.7"
+ccm = "^3.1.5"
+pytest-dependency = "^0.5.1"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
 
 [tool.coverage.run]
 branch = true
-source = ["fogd_db"]
+source = ["cassy"]
 
 [tool.coverage.report]
 show_missing = true

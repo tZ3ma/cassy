@@ -1,0 +1,59 @@
+# tests/db_api/test_casdb.py
+"""Test succesfull local cassandra db setup, used for further testing."""
+import cassandra.cluster
+import pytest
+
+import cassy.casdriv as cassy_driv
+
+
+# @pytest.mark.dependency()
+# def test_connect_session(ccmlib_cluster):
+#     pass
+
+
+# @pytest.fixture(scope="module")
+# @pytest.mark.dependency(depends=["test_connect_session"])
+# def test_create_keyspace():
+#     pass
+
+
+@pytest.fixture(scope="module")
+def casdriv_cns(ccmlib_cluster):
+    """Test getting cluster object with a connected session using casriv."""
+
+    cluster, session = cassy_driv.connect_session(
+        ips=ccmlib_cluster._bnry_contacts,
+        port=ccmlib_cluster._bnry_port,
+    )
+
+    # # to create pytest keyspace if necessary
+    # session.execute(
+    #     "CREATE KEYSPACE IF NOT EXISTS pytest_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};")
+
+    yield cluster, session
+
+    print("disconnect session")
+    session.shutdown()
+
+
+@pytest.mark.dependency()
+def test_keyspace_creation(casdriv_cns):
+    """Test keyspace creation using casdriv."""
+
+
+
+# def test_setup_cns(ccmlib_cluster, casdriv_cns):
+#     """Test succesful casdb session initializtation."""
+#     cc = ccmlib_cluster
+#     node = cc.nodes['node1']
+#     binary_ip, binary_port = node.network_interfaces['binary']
+
+#     casdb_cluster, casdb_session = casdb.set_up_cns(
+#         ips=(binary_ip,),
+#         port=binary_port,
+#         keyspace='pytest_keyspace',
+#     )
+
+#     keyspaces = casdb_cluster.metadata.keyspaces
+#     # assert isinstance(casdb_cluster, casdb.Cluster)
+#     assert 'pytest_keyspace' in keyspaces
