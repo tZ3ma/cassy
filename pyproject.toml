@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cassy"
-version = "0.0.10"
-description = "Tweaked Hypermodern Python Project Template w/o Typing"
+version = "0.0.11"
+description = "Python Cassandra Database API"
 authors = ["Mathias Ammon <mathias.ammon@tuhh.de>"]
 license = "MIT"
 readme = "README.rst"
