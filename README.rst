@@ -95,15 +95,6 @@ cassy
 Python Cassandra Database API
 
 
-.. note::
-
-   Current lack of coverage and test failing due to not beeing able to set up
-   a cassandra cluster on github CI/CD. Locally, all tests pass, and coverage
-   is a 100%.
-
-   Advice/Help greatly appreciated.
-
-
 Installation
 ------------
 
