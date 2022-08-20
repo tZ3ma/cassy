@@ -14,6 +14,7 @@ Unittests
 
    unittests/test_casdriv
    unittests/test_cql
+   unittests/test_model
 
 .. rubric:: Default Template Tests
 .. toctree::
