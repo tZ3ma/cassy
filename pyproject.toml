@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cassy"
-version = "0.0.12"
+version = "0.0.13"
 description = "Python Cassandra Database API"
 authors = ["Mathias Ammon <mathias.ammon@tuhh.de>"]
 license = "MIT"

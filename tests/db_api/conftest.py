@@ -20,7 +20,7 @@ def ccmlib_cluster(tmp_path_factory):
         cluster_path, "pytest_tmp_cluster", cassandra_version="4.0.4"
     )
 
-    cluster.populate(1, ipprefix="127.0.1.").start(timeout=180)
+    cluster.populate(1, ipprefix="127.0.1.").start(timeout=300)
 
     cluster._bnry_contacts = [
         node.network_interfaces["binary"][0] for node in cluster.nodelist()

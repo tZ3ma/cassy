@@ -12,3 +12,4 @@ API
 
    api/casdriv
    api/cql
+   api/model
