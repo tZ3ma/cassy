@@ -28,6 +28,8 @@ class Plant(Model):
 class ClusterPlant(Model):
     """Plant Dataclass, ready to be cassandrad.
 
+    Has additional clustering keys sorted in ascending order.
+
     Parameters
     ----------
     latin: str
@@ -125,7 +127,7 @@ def test_create_entry_without_syncing(casdriv_cns):
 
 @pytest.mark.dependency(depends=["test_keyspace_simple_creation"])
 def test_create_cluster_entry(casdriv_cns):
-    """Test creating a db entry using create_entry."""
+    """Test creating a db entry using create_entry and clustering keys."""
     kspace = "pytest_casdriv_simple_keyspace"
     connection = cassy_driv.get_cluster_name(casdriv_cns.cluster)
 
