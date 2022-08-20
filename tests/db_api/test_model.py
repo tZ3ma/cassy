@@ -183,32 +183,3 @@ def test_create_retrieve_store_load(tmp_path, casdriv_cns):
     )
 
     assert "schreiben lesen speichern laden" in entry.German
-
-
-# [ ] - test_create_retrieve_store_load aka design case
-
-
-# def test_create_entry(casdriv_cns):
-#     """Test creating a db entry using create_entry."""
-#     kspace = "pytest_casdriv_simple_keyspace"
-#     connection = cassy_driv.get_cluster_name(casdriv_cns.cluster)
-
-#     data_dict = {
-#         "latin": "lupulus",
-#         "english": "wolve",
-#         "german": "Wolf",
-#     }
-
-#     cassy_driv.create_entry(
-#         model=Plant,
-#         data=data_dict,
-#         prior_syncing=True,
-#         keyspace=kspace,
-#         con=connection,
-#     )
-
-#     keyspace_tables = cassy_driv.list_keyspace_tables(
-#         cluster=casdriv_cns.cluster,
-#         keyspace=kspace,
-#     )
-#     assert "plant" in keyspace_tables
