@@ -145,7 +145,7 @@ def create_data_model(meta_model, path, overwrite=False, backup=True):
     meta_model: :class:`MetaModel`
         dataclass describing the model data.
     path: pathlib.Path, str
-        Path or string specifying the folder the hardcoded
+        Path or string specifying the file location the hardcoded
         module will be located.
     overwrite: bool, default=False
         Boolean indicating whether the hardcoded model data file should be
@@ -178,7 +178,7 @@ def create_data_model(meta_model, path, overwrite=False, backup=True):
 
         path = create_data_model(
             meta_model=my_meta_model,
-            path=os.path.join("~", ".fogd.d", "my_model.py"),
+            path=os.path.join("~", ".fogdb.d", "cassy_docstring_model.py"),
             overwrite=True,
         )
     """
